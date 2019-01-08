@@ -1,7 +1,16 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+end
+
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "Test Blog Post #{blog}",
-    body: "Truffaut succulents tofu tousled gentrify keytar, narwhal stumptown cornhole godard health goth mumblecore echo park cray polaroid. Mustache blog yr roof party, hashtag flannel food truck succulents selvage sriracha. Disrupt schlitz tbh poke gastropub PBR&B yr banh mi brooklyn. Health goth asymmetrical retro try-hard. Helvetica ethical tattooed, health goth hell of direct trade pok pok jean shorts. Offal sustainable poutine stumptown, flexitarian man braid affogato."
+    body: "Truffaut succulents tofu tousled gentrify keytar, narwhal stumptown cornhole godard health goth mumblecore echo park cray polaroid. Mustache blog yr roof party, hashtag flannel food truck succulents selvage sriracha. Disrupt schlitz tbh poke gastropub PBR&B yr banh mi brooklyn. Health goth asymmetrical retro try-hard. Helvetica ethical tattooed, health goth hell of direct trade pok pok jean shorts. Offal sustainable poutine stumptown, flexitarian man braid affogato.",
+    topic_id: Topic.last.id
      )
 end
 
@@ -16,14 +25,27 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Test title #{portfolio_item}" ,
-    subtitle: "My great service",
+    subtitle: "Ruby on Rails",
     body: "test text",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200"
     )
 end
 
-puts "9 portfolio items created"
+puts "8 portfolio items created"
+
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Test title #{portfolio_item}" ,
+    subtitle: "Angular",
+    body: "test text",
+    main_image: "https://via.placeholder.com/600x400",
+    thumb_image: "https://via.placeholder.com/350x200"
+    )
+end
+
+puts "1 portfolio items created"
